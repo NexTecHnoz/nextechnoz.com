@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 // GLOBAL & DEFAULT STYLES
@@ -17,40 +15,26 @@
 
 :root {
     --black: #1b1c1e;
-    // --black: #3f4144;
-    --offwhite: #f4f4f4;
-    --offwhite: rgb(232, 232, 232);
     --offwhite: rgb(238, 238, 239);
-    // --offwhite: rgb(238, 243, 243);
     --dark-grey: #525252;
     --light-grey: rgb(136, 136, 136);
-    --accent: #707080; 
-    --accent: #525252;
+    --lightblue: dodgerblue;
+    --darkblue: royalblue;
     --accent: #3f4144;
-    // --accent: #637959;
-    // --accent: #004D40;
-    // --accent: #26A69A;
 
     --dark-foreground: #2c2d30;
     --light-foreground: #fff;
 
-
-    // --background-color-primary: rgb(232, 232, 232);
-    // --background-color-secondary: #fafafa;
-
-    // --global-font-primary: 'IBM Plex Sans', Helvetica, sans-serif;
     --global-font-primary: -apple-system, "Segoe UI", system-ui, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     --global-font-secondary: "Raleway", sans-serif;
     --global-font-mono: 'Source Code Pro', monospace;
-
-    //--global-font-primary: "Noto Sans Display", sans-serif;
 }
 
 html {
     background-color: var(--background-color);
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-	pointer-events: auto;
+    pointer-events: auto;
     font-size: 14px;
     font-size: 18px;
 }
@@ -66,7 +50,7 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding: 5vmin 0;
+    padding: 5vmin;
 
     @media (max-width:768px) {
         padding: 0;
@@ -78,9 +62,12 @@ main, footer {
     max-width: 1200px;
     background-color: var(--foreground-color);
     margin: 0 auto;
-
     border: 3px solid var(--foreground-color);
     border-radius: 20px;
+
+    @media (max-width:768px) {
+        border: none;
+    }
 }
 
 h1 {
@@ -90,9 +77,6 @@ h1 {
 
 h2, .h2 {
     font-size: 2.25rem;
-    
-    //text-transform: uppercase;
-
     font-weight: 400;
     //letter-spacing: .1vw;
     //padding-bottom: 1em;
@@ -104,7 +88,7 @@ h3, .h3 {
     line-height: 1.25;
 }
 
-p,q,details {
+p,q {
     line-height: 1.75;
     margin: 1rem 0;
     //max-width: 800px;
@@ -118,14 +102,16 @@ p,q,details {
     }
 }
 
+details {
+    line-height: 1.75;
+    margin: 1rem 0;
+}
+
 a {
     cursor: pointer !important;
     color: var(--font-color);
-    //text-decoration: none;
     font-weight: 500;
-    //letter-spacing: 1px;
     transition: all 0.25s;
-    //padding-right: 1em;
 
     &:hover {
         text-decoration: none;
@@ -182,6 +168,7 @@ q.noquote::before, q.noquote::after{
 img {
     object-fit: cover;
     width: 100%;
+    border-radius: 8px;
 }
 
 details {
@@ -196,13 +183,12 @@ details {
         }
 
         &:hover {
-            color: dodgerblue;
+            color: var(--blue);
         }
     }
 }
 
 .services > details {
-    //margin: unset;
     flex-grow: 2;
     min-width: 200px;
     margin: 2em 0 0 2em !important;
@@ -215,22 +201,6 @@ details {
     }
 }
 
-details[open].menunav {
-    summary {
-        &:hover {
-            color: white;
-        }
-
-        @media (min-width: 425px) {
-            display: none;
-        }
-    }
-}
-
-.menunav {
-    margin-top: 0;
-}
-
 .paren::before, .paren::after{
     content: "(";
     margin: 0 2px;
@@ -241,14 +211,15 @@ details[open].menunav {
 
 footer {
     padding: 5em 2em;
-    background-color: var(--dark-foreground);
     background-color: var(--black);
-    // border: 3px solid var(--foreground-color);
-    // border-top: 2em solid var(--background-color);
     margin-top: 2em;
 
     a,p {
         color: var(--light-foreground);
+    }
+
+    div {
+        max-width: 300px;
     }
 }
 
@@ -265,12 +236,14 @@ footer {
         --foreground-color: var(--dark-foreground);
         --font-color: var(--offwhite);
         --accent: #3f4144;
+        --blue: var(--darkblue);
     }
     
     body:has(.colormode:checked) {
         --background-color: var(--offwhite);
         --foreground-color: var(--light-foreground);
         --font-color: var(--accent);
+        --blue: var(--lightblue);
     }
   }
   
@@ -279,13 +252,15 @@ footer {
         --background-color: var(--offwhite);
         --foreground-color: var(--light-foreground);
         --font-color: var(--accent);
+        --blue: var(--lightblue);
     }
 
     body:has(.colormode:checked) {
         --background-color: var(--black);
         --foreground-color: var(--dark-foreground);
         --font-color: var(--offwhite);
-        --accent: #3f4144;;
+        --accent: #3f4144;
+        --blue: var(--darkblue);
     }
 }
 
@@ -352,6 +327,12 @@ footer {
     align-content: center;
 }
 
+.align-right {
+    align-items: right;
+    align-content: right;
+    text-align: right;
+}
+
 .stretch {
     align-content: stretch;
     align-items: stretch;
@@ -361,7 +342,7 @@ footer {
     flex-grow: 2;
 }
 
-.media-center {
+.mobile-center {
     @media (max-width: 768px) {
         justify-content: center;
         text-align: center;
@@ -383,13 +364,13 @@ footer {
     }
 }
 
-.fliphide-show {
+.mobile-hide {
     @media (max-width: 768px) {
         display: none;
     }
 }
 
-.fliphide-hide {
+.desktop-hide {
     @media (min-width: 768px) {
         display: none;
     }
@@ -402,31 +383,9 @@ footer {
     padding: 1em 0;
 }
 
-.huge {
-    font-family: var(--global-font-primary);
-    font-size: 12vmax;
-    font-weight: 800;
-    letter-spacing: -5px;
-    line-height: 1;
-    transition: .5s all ease-out;
-
-    @media (max-width:1024px){
-        font-size: 6rem;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width:425px){
-        font-size: 3rem;
-        letter-spacing: 1px;
-    }
-
-    a {
-        font-weight: 800;
-    }
-}
-
 .min {
-    font-size: 1.25rem;
+    font-size: .85rem;
+    line-height: 1.25;
 }
 
 .medium {
@@ -550,7 +509,7 @@ input:hover + .slider:before {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    padding-top: 3em;
+    //padding-top: 3em;
     z-index: 100;
     background: var(--background-color);
     background: inherit;
@@ -607,22 +566,28 @@ a.arrowdiagup:hover:after {
 
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
-#nav {
-    font-size: 16px;
+#nav, #mobilenav {
     --menu-color: white;
-    background-color: var(--accent);
-    background-color: slategray;
-    background-color: #3db6e2;
-    background-color: dodgerblue;
-    // background-color: deepskyblue;
-    padding: .75em;
     color: var(--menu-color);
+    font-size: 16px;
+    background-color: var(--blue);
+    padding: .75em;
     // border-radius: 0 0 20px 20px;
 
     a {
         color: var(--menu-color);
         text-decoration: none;
         padding: .5em 1em;
+    }
+}
+
+#mobilenav {
+    margin: 0;
+
+    summary {
+        &:hover {
+            color: white;
+        }
     }
 }
 
@@ -640,6 +605,7 @@ a.arrowdiagup:hover:after {
 
     .background-color {
         background-color: var(--background-color);
+        border-radius: 8px;
         // transition: .5s;
         
         div {
@@ -693,7 +659,7 @@ a.arrowdiagup:hover:after {
 .column {
     max-width: 66%;
 
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         max-width: 100%;
     }
 }
@@ -725,7 +691,7 @@ a.arrowdiagup:hover:after {
 // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_* 
 
 @media (prefers-reduced-motion: no-preference) {
-main > * , h1 
+.hero, main > * , h1 
     {
         animation-duration: 1.25s;
         -webkit-animation-timing-function: ease;
@@ -733,6 +699,10 @@ main > * , h1
         animation-fill-mode: forwards;
         animation-name: moveInUp; 
     }
+}
+
+.hero {
+    animation-name: biggy; 
 }
 
 @keyframes moveInUp {
@@ -747,19 +717,9 @@ main > * , h1
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .hero {
-        animation-duration: 1.25s;
-        -webkit-animation-timing-function: ease;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
-        animation-name: biggy; 
-    }
-}
-
 @keyframes biggy {
     0% {
-        height: 1000vh;
+        height: 2000vh;
         opacity: 0;
     }
     

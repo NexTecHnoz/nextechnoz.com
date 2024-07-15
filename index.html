@@ -37,7 +37,7 @@
                     <img src="./images/logos/filemaker18.png">
                     <img src="./images/logos/wordpress.png">
                     <img src="./images/logos/adobe.png">
-                    <img src="./images/logos/camtasia.png">
+                    <img class="mobile-hide" src="./images/logos/camtasia.png">
                     <img src="./images/logos/apple.png">
                     
                 </div>
@@ -45,26 +45,35 @@
        </div>
     </div>
 
+    <nav class="sticky">
+        <div id="nav" class="mobile-hide flex-row align-center justify-even grow">
+            <label class="switch">
+                <input type="checkbox" class="colormode">
+                <span class="slider"></span>
+            </label>
+            <a href="#about">#about NexTecH</a> 
+            <a href="#services">#services</a> 
+            <a href="#support">#platform Support</a> 
+            <a href="#" class="arrowdiagup">Claris Partner Network</a> 
+            <a href="tel:7028047645" class="arrowdiagup">Phone</a>
+            <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
+        </div>
 
-    <nav id="nav" class="flex-row align-center justify-even grow sticky">
-       
-        <label class="switch">
-            <input type="checkbox" class="colormode">
-            <span class="slider"></span>
-        </label>
-
-        <!-- <details class="menunav">
-            <summary>Jump to</summary> -->
-            <!-- <div class="flex-row align-center justify-between grow" style="max-width:800px"> -->
+        <details id="mobilenav" class="desktop-hide align-right">
+            <summary>Menu</summary>
+            <div class="flex-column sticky">
+                <label class="switch">
+                    <input type="checkbox" class="colormode">
+                    <span class="slider"></span>
+                </label>
                 <a href="#about">#about NexTecH</a> 
                 <a href="#services">#services</a> 
                 <a href="#support">#platform Support</a> 
                 <a href="#" class="arrowdiagup">Claris Partner Network</a> 
-                <a href="tel:7028047645" class="">Call 702-804-7645</a>
-            <!-- </div> -->
-        <!-- </details> -->
-        <!-- <span style="width: 50px;"></span> --> 
-        <a href="#" class="arrowup"></a>
+                <a href="tel:7028047645" class="arrowdiagup">Phone</a>
+                <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
+            </div>
+        </details>
     </nav>
 
     <div class="section">
@@ -192,8 +201,8 @@
     </div>
 
     <div id="about" class="section">
-        <div class="section-inner grid flex-row justify-even background-color">
-            <div style="text-align: left;">
+        <div class="section-inner grid flex-row align-center justify-even background-color">
+            <div style="margin-left: 2em; text-align: left;">
                <h3>Who we are</h3>
                 <p>We're dedicated members of the community, and we WANT to see your business thrive.</p>
                 <details>
@@ -203,69 +212,89 @@
                 </details>
             </div>
             <div>
-                <img src="./images/dark.png">
+                <img src="./images/filemakercertified.png" style="padding-right: 3em; margin-right: 2em; background-color: auto;">
+                <ul class="hide" style="text-align:left">
+                    <li>certifiedd</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div id="support" class="section">
+    <div id="support" class="section half">
         <div class="section-inner">
-            <h2>Dozens of Solutions to Business Needs</h2>
-            <p>We have developed custom solutions for businesses of all types. We understand that each industry has unique needs that require specialized systems to more effectively manage their business.</p>
-            <div class="flex-row justify-between">
+            <!--<h2>Dozens of Solutions to Business Needs</h2>-->
+            <!--<p>We have developed custom solutions for businesses of all types. We understand that each industry has unique needs that require specialized systems to more effectively manage their business.</p>-->
+            <div class="flex-column align-center">
                 <h3 style="margin-top: 1.15em">Programs Supported</h3>
-                <div class="flex-row justify-between grow" style="max-width: 600px"> 
-                    <details>
-                        <summary><img src="./images/logos/filemaker23.png">Claris Filemaker</summary>
-                        <p></p>
-                    </details>
-                    <details>
-                        <summary>Xcode</summary>
-                        <p></p>
-                    </details>
-                    <details>
-                        <summary>Wordpress</summary>
-                        <p></p>
-                    </details>
+                <div class="flex-row grid justify-between grow"> 
+                    <span><img style="width: 20px;" src="./images/logos/filemaker23.png">Claris Filemaker</span>
+                    <p>Xcode</p>
+                    <p>Wordpress</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section grid" style="margin: 1em 0;">
-        <div class="cover justify-center background-color">
-            <div class="section-inner" style="padding: 3em 0;">
-                <h2 class="h3" style="margin-bottom:1em">Tap in to the power of NEXTECH and our extensive network of associates to solve your business challenges.</h2>
-                <a href="#">Get in Touch</a>
+    <div class="section" style="margin: 1em 0;">
+        <div class="cover justify-center background-color" style="margin: 1em 0;">
+            <div class="section-inner" style="padding: 3em;">
+                <h2 class="h3">Tap in to the power of NEXTECH and our extensive network of associates to solve your business challenges.</h2>
+                <details>
+                    <summary>Get in Touch</summary>
+                    <div class="flex-column justify-even">
+                        <div>
+                            <h4>Contact DJ</h4>
+                            <p>Project Manager & Database Specialist<br>
+                                support@nextechnoz.com<br>
+                                Tel: (702) 768-7597</p>
+                        </div>
+
+                        <div>
+                            <h4>Contact Patti</h4>
+                            <p>Business Manager<br>
+                                patti@nextechnoz.com<br>
+                                    Tel: (702) 804-7645</p>
+                        </div>
+
+                        <div>
+                            <h4>Contact Willow</h4>
+                            <p>Database & Web Interface Designer<br>
+                                willow@nextechnoz.com</p>
+                        </div>
+
+                        <div>
+                            <h4>Office</h4>
+                           <p>
+                            2441 Tech Center Ct #107<br>
+                            Las Vegas<br>
+                            NV 89128
+                           </p>
+                        </div>
+                    </div>
+                </details>
             </div>
         </div>
 
-        <div class="flex-row justify-even">
-            <div class="grow background-color" style="padding: 3em 0;">            
-                <p>hi</p>
-            </div>
-        </div>
-
-        <div class="flex-row justify-even">
-            <div class="grow background-color" style="padding: 3em 0;">            
-                <p>hi</p>
-            </div>
-        </div>
-
-        <div class="flex-row justify-even">
-            <div class="grow background-color" style="padding: 3em 0;">            
-                <p>hi</p>
-            </div>
-        </div>
+        <img src="./images/2421-Tech-Center-Ct-Las-Vegas-NV-Main-Image-Edit-1-Large.jpg.webp">
     </div>
 
 </main>
 
-<footer>
-    <p class="h2" style="line-height:.5">NexTecH</p>
-    <p>Technology Integration Specialists</p>
-    <!-- <p><a href="">About</a> | <a href="">Contact</a></p> -->
-    <p>© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
+<footer class="flex-row align-center justify-between grid mobile-center">
+    <div>
+        <p class="h2" style="line-height:.5">NexTecH</p>
+        <p>Technology Integration Specialists</p>
+        <p class="min accent">© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
+    </div>
+
+    <a href="#" class="grow justify-center arrowup"></a>
+
+    <div class="flex-column align-right mobile-center">
+        <a class="arrowdiagup" href="">Claris Partner Network</a>
+        <a class="arrowdiagup" href="">Github</a>
+        <a class="arrowdiagup" href="">YouTube</a>
+        <p>Website ♡ <a href="https://sproocing.com">sprooc.ing</a></p>
+    </div>
 </footer>
 
 </body>
