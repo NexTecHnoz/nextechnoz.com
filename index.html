@@ -19,7 +19,7 @@
 </head>
 <body id="body">
 
-<header>
+<header class="flex-row align-center">
     <div class="hero section flex-row">
         <div class="section-inner flex-row align-center justify-between">
             <div>
@@ -33,6 +33,7 @@
                      <img src="./images/logos/wordpress.png" alt="Wordpress app icon">
                      <img src="./images/logos/adobe.png" alt="Adobe Creative Cloud app icon">
                      <img class="mobile-hide" src="./images/logos/camtasia.png" alt="Camtasia 2024 app icon">
+                     <img class="mobile-hide" src="./images/logos/html.png" alt="Camtasia 2024 app icon">
                      <img src="./images/logos/apple.png" alt="Apple XCode app icon">
                 </div>
             </div>
@@ -55,26 +56,34 @@
             <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
         </div>
 
-        <details id="mobilenav" class="desktop-hide justify-right">
-            <summary>Menu</summary>
-            <div class="flex-column sticky">
-                <label class="switch">
-                    <input type="checkbox" class="colormode">
-                    <span class="slider"></span>
-                </label>
-                <a href="#about">#aboutNexTecH</a> 
-                <a href="#services">#ourServices</a> 
-                <a href="#support">#platformSupport</a> 
-                <a href="https://www.claris.com/partners/profile/company.10000000212/" class="arrowdiagup">Claris Partner Network</a> 
-                <a href="tel:7028047645" class="arrowdiagup">Phone</a>
-                <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
+        <div id="mobilenav" class="desktop-hide flex-row align-center justify-between sticky">
+            <div class="flex-row justify-right">
+                <details class="">
+                    <summary>Menu</summary>
+                    <div class="flex-column justify-right">
+                        <label class="switch">
+                            <input type="checkbox" class="colormode">
+                            <span class="slider"></span>
+                        </label>
+                        <a href="#about">About NexTecH</a> 
+                        <a href="#services">Our Services</a> 
+                        <a href="#support">Platform Support</a> 
+                        <a href="https://www.claris.com/partners/profile/company.10000000212/" class="arrowdiagup">Claris Partner Network</a> 
+                        <!--<a href="tel:7028047645" class="arrowdiagup">Phone</a>-->
+                        <!--<a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>-->
+                    </div>
+                </details>
             </div>
-        </details>
+            <div class="justify-right grow">
+                <a href="tel:7028047645" class="arrowdiagup">Phone</a>
+                <a href="#" class="button justify-right arrowdiagup">Email</a>
+            </div>
+        </div>
     </nav>
 
     <div class="section">
         <div class="section-inner justify-center" style="max-width:700px">
-            <h2><span class="experts"></span><span class="experts"></span>We're Techperts <span class="min">(Tech Experts)</span></h2>
+            <h2><span class="experts"></span><span class="experts"></span>We're Techperts <span class="min">#techExperts</span></h2>
            <p class="">We’re FileMaker independent consultants who can provide the expertise you need to build, modify and manage a professional FileMaker solution. All consultants are vetted members of the <strong>Claris Business Alliance.</strong></p>
         </div>
     </div>
@@ -95,12 +104,13 @@
 
     <div id="services" class="section">
         <div class="section-inner">
+            <p class="min">#ourServices</p>
             <h2>Decades of experience</h2>
             <p><strong>NexTecH</strong> has an incredible network of partners that help get all manner of jobs done. Our business has been a member of the Filemaker community/<a href="https://www.claris.com/partners/profile/company.10000000212/">Claris Partner Network</a> for decades and has forged working relationships with developers, designers, coders, managers, and more.</p>
 
             <div class="flex-row justify-between">
                 <h3 style="margin-top: 1.15em">Featured Services</h3>
-                <div class="flex-row justify-between grow column services"> 
+                <div class="flex-row justify-left grow column services"> 
                     <details>
                         <summary>Custom Development</summary>
                         <p><strong>We create a platform to match your workflow and scale with your operations.</strong>
@@ -194,9 +204,10 @@
     <div id="about" class="section">
         <div class="section-inner grid flex-row align-center justify-center background-grey">
             <div class="justify-left">
+                <p class="min">#aboutNexTecH</p>
                <h3>Who we are</h3>
                 <p class="cert">We're dedicated members of the community, and we WANT to see your business thrive.
-                    We have worked with FileMaker Pro since version 1.0 (!!)
+                    We have worked with FileMaker Pro since version 1.0!!
                 </p>
                 <details>
                     <summary>About NexTecH</summary>
@@ -216,6 +227,7 @@
 
     <div id="support" class="section">
         <div class="section-inner justify-between">
+            <p class="min">#platformSupport</p>
             <h2>Dozens of Solutions to Business Needs</h2>
             <p>We have developed custom solutions for businesses of all types. 
                 Our mission is to deliver powerful, easy-to-use solutions for businesses, utilizing the absolute best products to provide top quality services.</p>
@@ -226,10 +238,6 @@
                     <p>Claris Cloud</p>
                     <p>Xcode</p>
                     <p>Wordpress</p>
-                <!--</div>
-                <details class="nomarker">
-                    <summary style="list-style-type: none">More...</summary>
-                    <div class="flex-row justify-center grid platforms"> -->
                         <p>Excel</p>
                         <p>Filemaker SDK</p>
                         <p>Adobe Photoshop</p>
@@ -245,8 +253,7 @@
                         <p>Adobe XD</p>
                         <p>OrderMyGear</p>
                         <p>SCSS</p>
-                    </div>
-                <!--</details>-->
+                </div>
             </div>
         </div>
     </div>
@@ -257,7 +264,6 @@
                 <h2 class="h3">Tap in to the power of NexTecH and our extensive network of associates to solve your business challenges.</h2>
                 <details>
                     <summary>Get in Touch</summary>
-                    <div class="flex-column justify-even">
                         <div>
                             <h4>Contact DJ</h4>
                             <p>Project Manager & Database Specialist<br>
@@ -286,7 +292,6 @@
                             NV 89128
                            </p>
                         </div>
-                    </div>
                 </details>
             </div>
         </div>
@@ -300,7 +305,7 @@
     <div>
         <p class="h2" style="line-height:.15">NexTecH</p>
         <p>Technology Integration Specialists</p>
-        <p class="min accent">© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
+        <p class="min darkgrey">© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
     </div>
 
     <a href="#" class="grow justify-center arrowup"></a>
