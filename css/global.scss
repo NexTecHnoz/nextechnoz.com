@@ -708,6 +708,7 @@ input:hover + .slider:before {
 .experts {
     &:before {
         content: "";
+        display: none;
         position: absolute;
         width: 0;
         height: 0;
@@ -731,7 +732,7 @@ input:hover + .slider:before {
 
 }
 
-@media (min-width:768px) {
+@media (min-width:1px) {
     #stats, #about, #contact {
         &:before {
             display: none;
