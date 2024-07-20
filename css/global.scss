@@ -17,6 +17,7 @@
     --black: #1b1c1e;
     --offwhite: #eeeeef;
     --darkgrey: #3f4144;
+    --darkgrey: slategrey;
     --lightgrey: gainsboro;
     --lightblue: aliceblue;
     --darkblue: #0d161f;
@@ -108,7 +109,7 @@ header, main, footer {
 
 h1 {
     font-size: 72px;
-    font-weight: 700;
+    font-weight: 800;
     //font-family: var(--global-font-secondary);
     letter-spacing: 4px;
     line-height: .75;
@@ -123,7 +124,7 @@ h2, .h2 {
     //font-weight: 400;
 
     @media (max-width:768px) {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -567,16 +568,33 @@ details.nomarker > summary::-webkit-details-marker {
     overflow-x: hidden;
     font-size: 18px;
     margin: 0;
-    border-radius: 0;
+    padding: 0;
     border: 0;
+    border-radius: 0;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
     border-bottom: 2px solid var(--foreground-color);
 
+    div {
+        padding: .25em 0;
+    }
+
     details {
-        //width: 100%;
         margin: 0;
+        padding: 0;
+
+        * {
+            margin: 0;
+            padding: .5em 0;
+        }
+
         summary {
             text-align:left;
-            //padding: 0 1em;
+
             &:hover {
                 color: white;
             }
@@ -584,12 +602,13 @@ details.nomarker > summary::-webkit-details-marker {
 
         div {
             width: calc(100vw - 2em);
-            margin: 1em 0;
+            margin: 0;
+            padding: 0;
         }
     }
 
-    .grow > a {
-        padding-right: .5em;
+    details, .grow > a {
+        padding: 0 .5em;
     }
 }
 
@@ -652,18 +671,41 @@ input:hover + .slider:before {
 #nextech:hover {
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>🤪</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
-#stats:hover {
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>🥳</text></svg>") 16 0,auto; /*!emojicursor.app*/
+#stats, #about, #contact {
+    &:before {
+        content: "👏";
+        position: absolute;
+        width: 0;
+        height: 0;
+        font-size: 2.5em;
+        left: .75em;
+        top: 93%;
+        transform: rotate(-10deg);
+        background-color: red;
+        border-radius: var(--border-radius-sm);
+    }
+    .cert:hover {
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>👏</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    }
 }
-.cert:hover {
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>👏</text></svg>") 16 0,auto; /*!emojicursor.app*/
+#stats {
+    &:before {
+        content: "🥳";
+    }
+    &:hover {
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>🥳</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    }
+}
+#contact {
+    &:before {
+        content: "🧑‍💻";
+    }
 }
 #office:hover {
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:1em;'><text y='50%'>📍🧑‍💻</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 
 .experts {
-    display: none;
     &:before {
         content: "";
         position: absolute;
@@ -687,6 +729,14 @@ input:hover + .slider:before {
         top: 6px;
     }
 
+}
+
+@media (min-width:768px) {
+    #stats, #about, #contact {
+        &:before {
+            display: none;
+        }
+    }
 }
 
 .section {
