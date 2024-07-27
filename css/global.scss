@@ -449,10 +449,12 @@ details.nomarker > summary::-webkit-details-marker {
 }
 
 .button {
+    text-decoration: none;
     font-size: .9em;
-    padding: 1.5em 3em;
+    padding: .75em 1.5em;
     border: 1px solid var(--font-color);
-    margin: 2em;
+    border-radius: var(--border-radius-sm);
+    margin: 1em;
     text-align: center;
 }
 
