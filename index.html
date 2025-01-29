@@ -1,326 +1,261 @@
-<!-- Designed and coded by Willow Layland. Contact willow@sprooc.ing -->
+<!-- Learn how to build a tailwind file here: https://www.youtube.com/watch?v=VCpfd1NgBD8&list=PL0Zuz27SZ-6M8znNpim8dRiICRrP5HPft&index=2-->
+<!-- MUST CHANGE THE FOLDERNAME IN package.json FIRST -->
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="theme-color" content="var(--background-color)">
     <meta name="description" content="NexTecH - Database & Website Development in Las Vegas">
     <meta name="author" content="NexTecH">
     <title>NexTecH - Database & Website Development in Las Vegas</title>
-    <link rel="stylesheet" href="./css/global.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hoveranimation.css">
+    <script src="./js/main.js" defer></script>
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <meta content="https://nextechnoz.com" property="og:url">
     <meta content="https://nextechnoz.com/images/nextech-thumb.png" property="og:image">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body id="body">
 
-<header class="flex-row align-center">
-    <div class="hero section flex-row">
-        <div class="section-inner flex-row align-center justify-between">
-            <div>
-                <h1 id="nextech">NexTecH</h1>
-                <p class="h3">Technology Integration Specialists</p><br>
+<body class="min-h-screen md:p-4 lg:py-20 mx-auto text-slate-700 bg-slate-200 dark:bg-slate-900 dark:text-white selection:text-sky-500 selection:bg-transparent antialiased">
+    
+    <header class="min-h-80 max-w-6xl flex flex-col md:flex-row md:items-center justify-center md:border border-slate-300 dark:border-slate-700 text-white [text-shadow:_0_4px_8px_rgba(14_165_223_/_0.75)] md:rounded-3xl md:mb-8 mx-auto p-4 py-30 md:py-0 md:px-12" style="background-image: url(./images/background.jpeg);">
+        <div class="md:pr-16 md:py-48">
+            <h1 id="nextech" class="text-5xl md:text-6xl font-bold">NexTecH</h1>
+            <h2 class="text-2xl font-medium">Technology Integration Specialists</h2>
+        </div>
+        <div class="max-w-lg py-6">
+            <div class="grid grid-cols-7 gap-3 md:gap-6">
+                <img src="./images/logos/filemaker23.png" alt="FileMaker 2023 app icon">
+                <img src="./images/logos/filemaker18.png" alt="FileMaker 2018 app icon">
+                <img src="./images/logos/wordpress.png" alt="Wordpress app icon">
+                <img src="./images/logos/adobe.png" alt="Adobe Creative Cloud app icon">
+                <img class="" src="./images/logos/camtasia.png" alt="Camtasia 2024 app icon">
+                <img class="" src="./images/logos/html.png" alt="Camtasia 2024 app icon">
+                <img src="./images/logos/apple.png" alt="Apple XCode app icon">
+        </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        <div id="nav" class="overflow-hidden bg-blue-600 dark:bg-blue-800 text-white font-semibold sticky top-0 z-10 md:rounded-full text-center">
+            <div class="p-4 md:p-1 md:space-y-0 flex flex-row flex-wrap justify-between md:justify-around items-center text-lg">
+                <button id="hamburger-button" class="md:hidden focus:outline-none">
+                    &#9776; Menu
+                </button>
+                <nav id="menu" class="py-4 md:text-sm space-y-3 gr/id w-full text-left md:text-center hidden md:inline md:space-x-6 lg:space-x-10" aria-label="main">
+                    <!--<span class="text-xl absolute -mt-1 md:ml-5 lg:ml-9">◐</span><input type="checkbox" class="colormode relative z-10 cursor-pointer -ml-28 opacity-0">-->
+                    <a href="#ourservices" class="hover:opacity-70">#ourServices</a>
+                    <a href="#aboutnextech" class="hover:opacity-70">#aboutNexTecH</a>
+                    <a href="#platformsupport" class="hover:opacity-70">#platformSupport</a>
+                    <a href="http://blog.nextechnoz.com" class="hover:opacity-70" >Blog ↗</a>
+                    <a href="https://www.claris.com/partners/profile/company.10000000212/" class="hover:opacity-70">Claris Partner Network ↗</a> 
+                    <a href="tel:7028047645" class="hidden md:inline hover:opacity-70">Phone↗</a>
+                    <a href="mailto:support@nextechnoz.com" class="hidden md:inline hover:opacity-70">Email↗</a>
+                </nav>
+                <nav class="md:hidden space-x-3" aria-label="main">
+                    <a href="tel:7028047645" class="hover:opacity-70">Phone</a>
+                    <a href="mailto:support@nextechnoz.com" class="hover:opacity-70">Email</a>
+                </nav>
             </div>
-            <div>
-                <div class="flex-row justify-center icons">
-                     <img src="./images/logos/filemaker23.png" alt="FileMaker 2023 app icon">
-                     <img src="./images/logos/filemaker18.png" alt="FileMaker 2018 app icon">
-                     <img src="./images/logos/wordpress.png" alt="Wordpress app icon">
-                     <img src="./images/logos/adobe.png" alt="Adobe Creative Cloud app icon">
-                     <img class="mobile-hide" src="./images/logos/camtasia.png" alt="Camtasia 2024 app icon">
-                     <img class="mobile-hide" src="./images/logos/html.png" alt="Camtasia 2024 app icon">
-                     <img src="./images/logos/apple.png" alt="Apple XCode app icon">
+        </div>
+    
+        <section id="main" class="min-h-screen bg-white sm:border border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white md:rounded-3xl md:my-8 mx-auto p-4 pt-0">
+            <div id="nextechnoz" class="max-w-xl mx-auto text-center py-12 md:py-28">
+                <p class="text-slate-500 dark:text-slate-400">#NexTecHnoz</p>
+                <h2 class="text-3xl my-3 md:text-4xl font-bold">Just ask: NexTecH knows</h2>
+                <p>We’re FileMaker independent consultants who can provide the expertise you need to build, modify and manage a professional FileMaker solution. All consultants are vetted members of the Claris Business Alliance.</p>
+            </div>
+
+            <div id="stats" class="max-w-4xl space-y-8 md:space-y-0 text-2xl text-center bg-slate-100 dark:bg-slate-700 mx-auto p-10 md:py-16 flex flex-col md:flex-row justify-around md:rounded-xl">
+                <div>
+                    <h3><strong>25+ YEARS</strong><br>in business</h3>
+                </div>
+                <div>
+                    <h3><strong>70,000+ HOURS</strong><br>of work</h3>
+                </div>
+                <div>
+                    <h3><strong>450+ CLIENTS</strong><br>secured</h3>
                 </div>
             </div>
-        </div>
-    </div>
-</header>
 
-<main class="">
-    <nav class="sticky">
-        <div id="nav" class="mobile-hide flex-row align-center justify-even grow">
-            <label class="switch">
-                <input type="checkbox" class="colormode">
-                <span class="slider"></span>
-            </label>
-            <a href="#about">#aboutNexTecH</a> 
-            <a href="#services">#ourServices</a> 
-            <a href="#support">#platformSupport</a> 
-            <a class="arrowdiagup" href="http://blog.nextechnoz.com">Blog</a>
-            <a href="https://www.claris.com/partners/profile/company.10000000212/" class="arrowdiagup">Claris Partner Network</a> 
-            <a href="tel:7028047645" class="arrowdiagup">Phone</a>
-            <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
-        </div>
-
-        <div id="mobilenav" class="desktop-hide flex-row align-center justify-between sticky">
-            <div class="flex-row justify-right">
-                <details class="">
-                    <summary>Menu</summary>
-                    <div class="flex-column justify-right">
-                        <label class="switch">
-                            <input type="checkbox" class="colormode">
-                            <span class="slider"></span>
-                        </label>
-                        <a href="#about">About NexTecH</a> 
-                        <a href="#services">Our Services</a> 
-                        <a href="#support">Platform Support</a> 
-                        <a href="https://www.claris.com/partners/profile/company.10000000212/" class="arrowdiagup">Claris Partner Network</a> 
-                        <a class="arrowdiagup" href="http://blog.nextechnoz.com">Blog</a>
-                        <!--<a href="tel:7028047645" class="arrowdiagup">Phone</a>-->
-                        <!--<a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>-->
-                    </div>
-                </details>
-            </div>
-            <div class="justify-right grow">
-                <a href="tel:7028047645" class="arrowdiagup">Phone</a>
-                <a href="mailto:support@nextechnoz.com" class="arrowdiagup">Email</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="section">
-        <div class="section-inner justify-center" style="max-width:700px">
-            <h2><span class="experts"></span><span class="experts"></span>Just ask - NexTecH knows</h2>
-           <p class="">We’re FileMaker independent consultants who can provide the expertise you need to build, modify and manage a professional FileMaker solution. All consultants are vetted members of the <strong>Claris Business Alliance.</strong></p>
-        </div>
-    </div>
-
-    <div id="stats" class="section">
-        <div class="section-inner thirds flex-row justify-even background-grey">
-            <div>
-                <h3>25+ YEARS <br>in business</h3>
-            </div>
-            <div>
-                <h3>70,000+ HOURS <br>of work</h3>
-            </div>
-            <div>
-                <h3>450+ CLIENTS <br>secured</h3>
-            </div>
-        </div>
-    </div>
-
-    <div id="services" class="section">
-        <div class="section-inner">
-            <p class="min darkgrey">#ourServices</p>
-            <h2>Decades of experience</h2>
-            <p><strong>NexTecH</strong> has an incredible network of partners that help get all manner of jobs done. Our business has been a member of the Filemaker community/<a href="https://www.claris.com/partners/profile/company.10000000212/">Claris Partner Network</a> for decades and has forged working relationships with developers, designers, coders, managers, and more.</p>
-
-            <div class="flex-row justify-between">
-                <h3 style="margin-top: 1.15em">Featured Services</h3>
-                <div class="flex-row justify-left grow column services"> 
-                    <details>
-                        <summary>Custom Development</summary>
-                        <p><strong>We create a platform to match your workflow and scale with your operations.</strong>
-                        </p>
-                        <p>
-                            Our team of experts can work closely with you to understand your specific workflow requirements and design a platform that perfectly aligns with your needs. Whether you have a small team or a large enterprise, our solutions can easily scale to accommodate your growing operations.
-                        </p><p>
-                            With our help, you can streamline your workflow, automate repetitive tasks, and improve overall efficiency. We can integrate various tools and technologies to ensure seamless connectivity and data synchronization across different departments and systems.
-                        </p><p>
-                            Additionally, our solutions are highly customizable, allowing you to add or modify features as your operations evolve. We prioritize user experience and ensure that the system is intuitive and easy to use for all your team members.
-                        </p><p>
-                            By partnering with us, you can leverage our expertise in workflow optimization and technology implementation to create a platform that works for you and the devices used within our comapany. Depending on your needs, access to your database can be directly through the FileMaker Pro App on your Mac or PC computer, from a web browser via WebDirect for Chromebooks and Android devices, or through the FileMaker Go app on your iPad or iPhone.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>Custom Mobile Apps</summary>
-                        <p><strong>Your database, right away, in your hands!!</strong></p>
-                        <p>We can efficiently convert your FileMaker database into iOS mobile app, readily available on the App Store. 
-                        <!-- </p><p>
-                            iOS app capailities include: 
+            <div id="ourservices" class="max-w-3xl mx-auto py-12 md:py-28">
+                <p class="text-slate-500 dark:text-slate-400">#ourServices</p>
+                <h2 class="text-3xl md:text-4xl my-3 font-bold">Decades of experience</h2>
+                <p><strong>NexTecH</strong> has an incredible network of partners that help get all manner of jobs done. Our business has been a member of the Filemaker community/<a href="https://www.claris.com/partners/profile/company.10000000212/" class="underline hover:no-underline">Claris Partner Network</a> for decades and has forged working relationships with developers, designers, coders, managers, and more.</p>
+                
+                <div class="max-w-3xl md:flex md:justify-between mt-6">
+                    <h3 class="text-2xl my-3">Featured Services</h3>
+                    <div class="md:w-2/3 mt-6 sm:flex flex-row flex-wrap divide-y divide-solid md:space-y-reverse dark:divide-slate-600"> 
+                        <span></span>
+                        <details class="grow sm:mx-3 py-3 space-y-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Custom Development</summary>
+                            <p><strong>We create a platform to match your workflow and scale with your operations.</strong></p>
+                            <p>Our team of experts can work closely with you to understand your specific workflow requirements and design a platform that perfectly aligns with your needs. Whether you have a small team or a large enterprise, our solutions can easily scale to accommodate your growing operations.</p>
+                            <p>With our help, you can streamline your workflow, automate repetitive tasks, and improve overall efficiency. We can integrate various tools and technologies to ensure seamless connectivity and data synchronization across different departments and systems.</p>
+                            <p>Additionally, our solutions are highly customizable, allowing you to add or modify features as your operations evolve. We prioritize user experience and ensure that the system is intuitive and easy to use for all your team members.</p>
+                            <p>By partnering with us, you can leverage our expertise in workflow optimization and technology implementation to create a platform that works for you and the devices used within our comapany. Depending on your needs, access to your database can be directly through the FileMaker Pro App on your Mac or PC computer, from a web browser via WebDirect for Chromebooks and Android devices, or through the FileMaker Go app on your iPad or iPhone.</p>
+                        </details>
+    
+                        <details class="grow sm:mx-3 py-3 space-y-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Custom Mobile Apps</summary>
+                            <p><strong>Your database, right away, in your hands!!</strong></p>
+                            <p>We can efficiently convert your FileMaker database into iOS mobile app, readily available on the App Store.</p>
+                            <p>- or -</p>
+                            <p><a href="https://apps.apple.com/us/app/claris-filemaker-go-2023/id1660969871">Filemaker Go</a> instantly brings your live database to iPhone and iPad. The Filemaker app is an excellent way to:</p>
                             <ul>
-                                <li>NFC reading</li>
-                                <li>Barcode scanning</li>
-                                <li>Location locking</li>
-                                <li>Apple Vision Pro support</li>
-                            </ul> -->
-                        </p>
-                        <p>- or -</p>
-                        <p><a href="https://apps.apple.com/us/app/claris-filemaker-go-2023/id1660969871">Filemaker Go</a> instantly brings your live database to iPhone and iPad. The Filemaker app is an excellent way to:</p>
-                        <ul>
-                            <li>Collect job data in the field, and update the database instantly</li>
-                            <li>Capture signatures for invoices or delivery receipts</li>
-                            <li>Add photos, videos, and audio from mobile device directly</li>
-                        </ul>
-                        <p>- and -</p>
-                        <p>
-                            We employ a UI/UX designer to create mobile-friendly interfaces for our solutions. We understand that good UI design is needed to optimize for smaller screens, touch interactions, and mobile-specific features like gestures and swipes. 
-                        </p><p>
-                            If you have an existing solution in need of a mobile interface, we can help. Mobile interfaces can later be deployed on either the App Store or on Filemaker Go.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>Software Support</summary>
-                        <p><strong>Custom software must not only meet your current needs,
-                            but also have the ability to adapt and evolve over time.</strong></p>
-                        <p>
-                            As businesses grow and change, their software requirements also evolve.  Therefore, it is crucial for custom software to be flexible and scalable, allowing for modifications and updates as needed. By designing software with adaptability in mind, businesses can future-proof their systems and ensure that they remain competitive and efficient in the ever-evolving digital landscape.
-                        </p>
-                    </details>
-                    
-                    <details>
-                        <summary>Filemaker Licensing</summary>
-                        <p><strong>We help you get a deal on your plan</strong></p>
-                        <p>
-                            We can assist you in purchasing a FileMaker license by guiding you through the process and providing the necessary information and support.
-                        </p><p>
-                            Everyone’s needs are unique, which is why there is a range of options to make sure you get exactly what you need. Whether it’s a simple User license or something more specific like Concurrencies or Site licenses, we’re here to find the perfect deal for you.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>Hosting</summary>
-                        <p>We'll provide support for the following hosting requirements:</p>
-                            
-                       <ul>
-                            <li>Renewal & Restoration of Existing Licenses</li>
-                            <li>Software Upgrades / Additional Licenses</li>
-                            <li>Server Installation and Configuration</li>
-                            <li>On-premise and Off-site options</li>
-                        </ul>
-                    </details>
-
-                    <details>
-                        <summary>Web Apps</summary>
-                        <p><strong>Custom Web Applications For Your Business</strong></p>
-                        <p>
-                            Claris offers web capabilities that can provide value to your business performance. By integrating with your custom web applications, you can leverage these features to generate customized reports and gain a deeper understanding of your operations.
-                        </p><p>
-                            We employ a UI/UX designer to create web-friendly interfaces for our solutions. We understand how to optimize for internet connectivity, and address Webdirect-specific features and limitations. 
-                        </p><p>
-                            If you have an existing solution in need of web interface optimization, we can help.
-                        </p>
-                    </details>
-                </div>   
-            </div>
-        </div>
-    </div>
-
-    <div id="about" class="section">
-        <div class="section-inner grid flex-row align-center justify-center background-grey">
-            <div class="justify-left">
-                <p class="min darkgrey">#aboutNexTecH</p>
-               <h3>Who we are</h3>
-                <p class="cert">We have worked with FileMaker Pro since version 1.0,
-                    we're dedicated members of the community, and we WANT to see your business thrive.
-                    
-                </p>
-                <details>
-                    <summary>About NexTecH</summary>
-                    <p>NexTecH’s Founder, DJ (Daniel James) has decades of information technology experience, with emphasis on software development and network management. Prior to founding NexTecH, DJ was a sole proprietor and graphic designer for Computer Graphic Business Services in Huntington Beach, CA. Now, he assists companies in bridging the gap between business and technology. </p>
-                    <ul>
-                        <li>FileMaker certified from versions 1-24</li>
-                        <li>30+ years combined experience</li>
-                        <li>Extensive experience bringing FileMaker to WebDirect and other external apps</li>
-                    </ul>
-                </details>
-            </div>
-            <div>
-                <img class="cert" src="./images/filemakercertified.png" alt="'FileMaker Certified' banner">
-            </div>
-        </div>
-    </div>
-
-    <div id="support" class="section">
-        <div class="section-inner justify-between">
-            <p class="min darkgrey">#platformSupport</p>
-            <h2>Dozens of Solutions to Business Needs</h2>
-            <p>We have developed custom solutions for businesses of all types. 
-                Our mission is to deliver powerful, easy-to-use solutions for businesses, utilizing the absolute best products to provide top quality services.</p>
-            <div class="justify-center">
-                <!--<h3>Platforms Supported</h3>-->
-                <div class="flex-row justify-center platforms"> 
-                    <p>Claris Filemaker Pro</p>
-                    <p>Claris Cloud</p>
-                    <p>Xcode</p>
-                    <p>Wordpress</p>
-                        <p>Excel</p>
-                        <p>Filemaker SDK</p>
-                        <p>Adobe Photoshop</p>
-                        <p>Jetpack</p>
-                        <p>TeamViewer</p>
-                        <p>NFC</p>
-                        <p>GitHub</p>
-                        <p>Adobe Illustrator</p>
-                        <p>TestFlight</p>
-                        <p>Data API</p>
-                        <p>Camtasia</p>
-                        <p>Notion</p>
-                        <p>Adobe XD</p>
-                        <p>OrderMyGear</p>
-                        <p>SCSS</p>
+                                <li>Collect job data in the field, and update the database instantly</li>
+                                <li>Capture signatures for invoices or delivery receipts</li>
+                                <li>Add photos, videos, and audio from mobile device directly</li>
+                            </ul>
+                            <p>- and -</p>
+                            <p>We employ a UI/UX designer to create mobile-friendly interfaces for our solutions. We understand that good UI design is needed to optimize for smaller screens, touch interactions, and mobile-specific features like gestures and swipes.</p>
+                            <p>If you have an existing solution in need of a mobile interface, we can help. Mobile interfaces can later be deployed on either the App Store or on Filemaker Go.</p>
+                        </details>
+    
+                        <details class="grow sm:mx-3 py-3 space-y-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Software Support</summary>
+                            <p><strong>Custom software must not only meet your current needs, but also have the ability to adapt and evolve over time.</strong></p>
+                            <p>As businesses grow and change, their software requirements also evolve.  Therefore, it is crucial for custom software to be flexible and scalable, allowing for modifications and updates as needed. By designing software with adaptability in mind, businesses can future-proof their systems and ensure that they remain competitive and efficient in the ever-evolving digital landscape.</p>
+                        </details>
+                        
+                        <details class="grow sm:mx-3 py-3 space-y-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Filemaker Licensing</summary>
+                            <p><strong>We help you get a deal on your plan</strong></p>
+                            <p>We can assist you in purchasing a FileMaker license by guiding you through the process and providing the necessary information and support.</p>
+                            <p>Everyone’s needs are unique, which is why there is a range of options to make sure you get exactly what you need. Whether it’s a simple User license or something more specific like Concurrencies or Site licenses, we’re here to find the perfect deal for you.</p>
+                        </details>
+    
+                        <details class="grow sm:mx-3 py-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Hosting</summary>
+                            <p>We'll provide support for the following hosting requirements:</p>
+                            <ul class="p-3 space-y-2 pl-6 list-disc">
+                                <li>Renewal & Restoration of Existing Licenses</li>
+                                <li>Software Upgrades / Additional Licenses</li>
+                                <li>Server Installation and Configuration</li>
+                                <li>On-premise and Off-site options</li>
+                            </ul>
+                        </details>
+    
+                        <details class="grow md:mx-3 py-3 space-y-3">
+                            <summary class="w-56 py-1 text-xl cursor-pointer hover:opacity-70">Web Apps</summary>
+                            <p><strong>Custom Web Applications For Your Business</strong></p>
+                            <p>Claris offers web capabilities that can provide value to your business performance. By integrating with your custom web applications, you can leverage these features to generate customized reports and gain a deeper understanding of your operations.</p>
+                            <p>We employ a UI/UX designer to create web-friendly interfaces for our solutions. We understand how to optimize for internet connectivity, and address Webdirect-specific features and limitations.</p>
+                            <p>If you have an existing solution in need of web interface optimization, we can help.</p>
+                        </details>
+                    </div>   
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="section">
-        <div id="contact" class="justify-center align-center background-grey" style="background-color:unset">
-            <div class="align-center" style="max-width: 768px; padding: 0; padding-bottom: 4em; margin: 0 auto;">
-                <h2 class="h3">Tap in to the power of NexTecH and our extensive network of associates to solve your business challenges.</h2>
-                <details>
-                    <summary>Get in Touch</summary>
+            <div id="aboutnextech" class="max-w-4xl space-y-8 md:space-y-0 bg-slate-100 dark:bg-slate-700 mx-auto p-6 sm:p-16 flex flex-col md:flex-row justify-around md:rounded-xl">
+                <div class="space-y-3">
+                    <p class="text-slate-500 dark:text-slate-400">#aboutNexTecH</p>
+                    <h3 class="text-2xl font-bold">Who we are</h3>
+                    <p class="">We have worked with FileMaker Pro since version 1.0,
+                        we're dedicated members of the community, and we WANT to see your business thrive.
+                        
+                    </p>
+                    <details class="space-y-3">
+                        <summary class="cursor-pointer hover:opacity-70">About NexTecH</summary>
+                        <p>NexTecH’s Founder, DJ (Daniel James) has decades of information technology experience, with emphasis on software development and network management. Prior to founding NexTecH, DJ was a sole proprietor and graphic designer for Computer Graphic Business Services in Huntington Beach, CA. Now, he assists companies in bridging the gap between business and technology. </p>
+                        <ul class="space-y-2 pl-6 list-disc">
+                            <li>FileMaker certified from versions 1-24</li>
+                            <li>30+ years combined experience</li>
+                            <li>Extensive experience bringing FileMaker to WebDirect and other external apps</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="py-6 md:py-12 align-middle">
+                    <img id="cert" class="w-[800px] md:pl-8" src="./images/filemakercertified.png" alt="'FileMaker Certified' banner">
+                </div>
+            </div>
+
+            <div id="platformsupport" class="max-w-3xl mx-auto py-12 md:py-28">
+                <p class="text-slate-500 dark:text-slate-400">#platformSupport</p>
+                <h2 class="text-3xl md:text-4xl my-3 font-bold">Dozens of Solutions to Business Needs</h2>
+                <p>We have developed custom solutions for businesses of all types. 
+                    Our mission is to deliver powerful, easy-to-use solutions for businesses, utilizing the absolute best products to provide top quality services.</p>
+                <div class="text-center flex flex-wrap gap-4 pt-8 justify-center">
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">★ Claris Filemaker Pro</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">★ Claris Cloud</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">★ Xcode</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">★ Wordpress.org</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Filemaker SDK</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Adobe Photoshop</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Jetpack</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">cPanel</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Excel</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">TeamViewer</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">NFC</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">VSCode</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Adobe Illustrator</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">TestFlight</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Data APIs</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Camtasia</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Notion</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Zapier</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">Adobe XD</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">InDesign</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">HTML</p>
+                    <p class="p-1 px-4 rounded-md bg-slate-100 dark:bg-slate-700">CSS</p>
+                </div>
+            </div>
+
+            <div id="" class="max-w-3xl mx-auto text-center py-12 md:py-14">
+                <h2 class="text-2xl font-bold">Tap in to the power of NexTecH and our extensive network of associates to solve your business challenges.</h2>
+                <details class="mt-10 space-y-10">
+                    <summary class="cursor-pointer hover:opacity-70">Get in Touch</summary>
                         <div>
-                            <h4>Contact DJ</h4>
+                            <h4 class="text-md font-bold my-2">Contact DJ</h4>
                             <p>Project Manager & Database Specialist<br>
                                 support@nextechnoz.com<br>
                                 Tel: (702) 768-7597</p>
                         </div>
 
                         <div>
-                            <h4>Contact Patti</h4>
+                            <h4 class="text-md font-bold my-2">Contact Patti</h4>
                             <p>Business Manager<br>
                                 patti@nextechnoz.com<br>
                                     Tel: (702) 804-7645</p>
                         </div>
 
                         <div>
-                            <h4>Contact Willow</h4>
+                            <h4 class="text-md font-bold my-2">Contact Willow</h4>
                             <p>Database & Web Interface Designer<br>
                                 willow@nextechnoz.com</p>
                         </div>
 
                         <div>
-                            <h4>Office</h4>
+                            <h4 class="text-md font-bold my-2">Office</h4>
                            <p>
                             2441 Tech Center Ct #107<br>
-                            Las Vegas<br>
-                            NV 89128
+                            Las Vegas, NV 89128
                            </p>
                         </div>
                 </details>
             </div>
+
+            <img id="office" class="w-full rounded-xl" src="./images/2421-Tech-Center-Ct-Las-Vegas-NV-Main-Image-Edit-1-Large.jpg.webp" alt="Tech Center Ct. office building under a sunset, a glowing pink sky">
+        </section>
+    </main>
+
+    <footer class="max-w-6xl bg-slate-900 md:border dark:border-slate-700 text-white items-center text-center mx-auto p-4 py-16 md:px-12 md:py-20 space-y-8 md:space-y-0 grid md:grid-cols-3 md:rounded-3xl">
+        <a href="#" class="text-3xl">↑</a>
+
+        <div class="md:-order-1 md:text-left">
+            <h2 class="text-4xl">NexTecH</h2>
+            <p>Technology Integration Specialists</p>
+            <p class="mt-4 text-slate-500 text-xs">© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
         </div>
-
-        <img id="office" src="./images/2421-Tech-Center-Ct-Las-Vegas-NV-Main-Image-Edit-1-Large.jpg.webp" alt="Tech Center Ct. office building under a sunset, a glowing pink sky">
-    </div>
-
-</main>
-
-<footer class="flex-row align-center justify-between mobile-center">
-    <div>
-        <p class="h2" style="line-height:.15">NexTecH</p>
-        <p>Technology Integration Specialists</p>
-        <p class="min darkgrey">© <script>document.write(new Date().getFullYear())</script> NexTecH. All rights reserved. Claris and Filemaker are registered trademarks of Claris International Inc.</p>
-    </div>
-
-    <a href="#" class="grow justify-center arrowup"></a>
-
-    <div class="flex-column justify-right mobile-center">        
-        <a class="arrowdiagup" href="http://blog.nextechnoz.com">Blog</a>
-        <a class="arrowdiagup" href="https://www.claris.com/partners/profile/company.10000000212/">Claris Partner Network</a>
-        <a class="arrowdiagup" href="https://github.com/NexTecHnoz">Github</a>
-        <a class="arrowdiagup" href="https://www.youtube.com/channel/UC2mn4eLgwW08Q49fag0YntQ">YouTube</a>
-        <p>Website ♡ <a href="https://sproocing.com">sprooc.ing</a></p>
-    </div>
-</footer>
-
+    
+        <div class="flex flex-col md:text-right font-semibold">        
+            <a href="http://blog.nextechnoz.com"><span class="underline hover:no-underline">Blog</span></a>
+            <a href="https://www.claris.com/partners/profile/company.10000000212/"><span class="underline hover:no-underline">Claris Partner Network</span></a>
+            <a href="https://github.com/NexTecHnoz"><span class="underline hover:no-underline">Github</span></a>
+            <a href="https://www.youtube.com/channel/UC2mn4eLgwW08Q49fag0YntQ"><span class="underline hover:no-underline">YouTube</span></a>
+            <p class="mt-2 text-xs">website ♡ <a class="underline hover:no-underline" href="https://sproocing.com">sprooc.ing</a></p>
+        </div>
+    </footer>
 </body>
 </html>
